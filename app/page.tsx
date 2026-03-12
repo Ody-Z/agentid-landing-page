@@ -112,6 +112,28 @@ export default function Home() {
 
         <div className="hero-visual" aria-hidden="true">
           <div className="visual-core">
+            <svg
+              className="core-emblem"
+              viewBox="0 0 120 88"
+              role="presentation"
+              focusable="false"
+            >
+              <g transform="rotate(-16 40 44)">
+                <circle
+                  cx="30"
+                  cy="44"
+                  r="18"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="12"
+                />
+                <circle cx="30" cy="44" r="6" fill="#13201c" />
+                <rect x="46" y="38" width="48" height="12" rx="6" fill="currentColor" />
+                <rect x="68" y="50" width="10" height="18" rx="2" fill="currentColor" />
+                <rect x="84" y="50" width="10" height="24" rx="2" fill="currentColor" />
+                <rect x="90" y="38" width="10" height="12" rx="2" fill="currentColor" />
+              </g>
+            </svg>
             <span className="core-label">AGNT_KEY</span>
           </div>
           <div className="orbit-card orbit-phone">
