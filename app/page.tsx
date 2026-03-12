@@ -1,50 +1,50 @@
 const bundleItems = [
   {
-    title: "Phone number",
-    label: "VOICE + SMS",
+    title: "SMS + phone",
+    label: "TEXT API",
     description:
-      "Provision a dedicated number for each agent and route calling, verification, and messaging through a single identity layer.",
+      "Give your agent its own phone number so it can text people and receive replies.",
   },
   {
     title: "Email inbox",
-    label: "INBOUND OPS",
+    label: "EMAIL API",
     description:
-      "Spin up inboxes that agents can monitor, classify, and reply from without building separate auth and mailbox infrastructure.",
+      "Give your agent an inbox so it can send email, read replies, and stay in the loop.",
   },
   {
-    title: "MPC wallet",
-    label: "ASSET CONTROL",
+    title: "Crypto wallet",
+    label: "WALLET API",
     description:
-      "Attach programmable wallets with approval policy, custody separation, and transaction visibility from day one.",
+      "Give your agent a wallet so it can hold funds and make onchain payments when needed.",
   },
 ];
 
 const workflowSteps = [
   {
     index: "01",
-    title: "Provision",
+    title: "Create",
     description:
-      "Create an agent identity bundle and issue an AGNT_KEY that maps phone, inbox, and wallet into one access layer.",
+      "Create one AGNT_KEY and get email, SMS, and wallet access for your agent.",
   },
   {
     index: "02",
-    title: "Integrate",
+    title: "Connect",
     description:
-      "Use any framework, runtime, or orchestration stack. AgentID stays outside your model layer and plugs into existing flows.",
+      "Plug it into your app or agent framework instead of wiring together three different tools.",
   },
   {
     index: "03",
-    title: "Operate",
+    title: "Run",
     description:
-      "Manage communications, treasury actions, and recovery controls from a unified surface built for autonomous systems.",
+      "Your agent can email people, text people, and use a wallet from one simple setup.",
   },
 ];
 
 const assuranceItems = [
-  "Single-key access with separated underlying services",
-  "Policy-ready wallet controls for agent transactions",
-  "Inbox and phone provisioning designed for production workflows",
-  "Built for teams that need auditability, not just demos",
+  "One key for email, SMS, and wallet access",
+  "Each agent gets its own inbox, number, and wallet",
+  "Simple enough for people just playing around with agents",
+  "Ready to grow into a real product when you need it",
 ];
 
 export default function Home() {
@@ -77,20 +77,20 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Framework-agnostic identity infrastructure for AI agents</p>
+          <p className="eyebrow">Email, SMS, and wallet APIs for AI agents</p>
           <h1>
-            One key.
+            Give your agent
             <br />
-            One phone.
+            email, SMS,
             <br />
-            One inbox.
+            and a crypto
             <br />
-            One wallet.
+            wallet.
           </h1>
           <p className="hero-text">
-            AgentID provisions a complete identity bundle for each agent: a phone
-            number, an email inbox, and an MPC wallet, all accessed through a
-            single <span>AGNT_KEY</span>.
+            AgentID gives your agent the basics a human already has: email like
+            Gmail, texting like iMessage, and a crypto wallet like Coinbase. You
+            connect all three with one <span>AGNT_KEY</span>.
           </p>
 
           <div className="hero-actions">
@@ -98,15 +98,15 @@ export default function Home() {
               Join waitlist
             </a>
             <p className="micro-copy">
-              Built for agent teams that need trust, operational clarity, and a
-              production-grade control plane.
+              Built for anyone experimenting with agents, from side projects to
+              production apps.
             </p>
           </div>
 
           <div className="signal-strip">
-            <span>Carrier-ready provisioning</span>
-            <span>Programmable inbox operations</span>
-            <span>MPC wallet security</span>
+            <span>Email API</span>
+            <span>SMS API</span>
+            <span>Wallet API</span>
           </div>
         </div>
 
@@ -137,16 +137,16 @@ export default function Home() {
             <span className="core-label">AGNT_KEY</span>
           </div>
           <div className="orbit-card orbit-phone">
-            <strong>Phone</strong>
-            <span>Agent hotline</span>
+            <strong>SMS</strong>
+            <span>Texting for your agent</span>
           </div>
           <div className="orbit-card orbit-inbox">
-            <strong>Inbox</strong>
-            <span>Shared memory channel</span>
+            <strong>Email</strong>
+            <span>Inbox for your agent</span>
           </div>
           <div className="orbit-card orbit-wallet">
             <strong>Wallet</strong>
-            <span>MPC transaction rail</span>
+            <span>Crypto wallet access</span>
           </div>
           <div className="visual-ring ring-a" />
           <div className="visual-ring ring-b" />
@@ -155,21 +155,21 @@ export default function Home() {
       </section>
 
       <section className="trust-band">
-        <p>Identity primitives for autonomous systems that need to look legitimate from the first interaction.</p>
+        <p>Everything your agent needs to message people and hold money, behind one simple API.</p>
         <div>
-          <span>Secure-by-design</span>
-          <span>Operationally clean</span>
-          <span>Built for real deployment</span>
+          <span>Email</span>
+          <span>SMS</span>
+          <span>Wallet</span>
         </div>
       </section>
 
       <section className="bundle-section" id="bundle">
         <div className="section-heading">
-          <p className="eyebrow">Identity bundle</p>
-          <h2>Provision once. Operate everywhere.</h2>
+          <p className="eyebrow">What you get</p>
+          <h2>Three basics, one API.</h2>
           <p>
-            AgentID turns fragmented communications and wallet plumbing into one
-            deterministic developer surface.
+            Instead of stitching together email, phone, and wallet tools yourself,
+            AgentID gives you one simple place to start.
           </p>
         </div>
 
@@ -183,11 +183,11 @@ export default function Home() {
           ))}
 
           <article className="bundle-card bundle-card-accent">
-            <span className="card-tag">CONTROL LAYER</span>
-            <h3>One abstraction, not three integrations</h3>
+            <span className="card-tag">SIMPLE IDEA</span>
+            <h3>Like Gmail, iMessage, and Coinbase for agents</h3>
             <p>
-              Keep your agent stack framework-agnostic while centralizing identity,
-              credentials, and operator controls around a single access primitive.
+              Humans get an inbox, a phone, and a wallet. AgentID gives your
+              agents the same basics through one API key.
             </p>
           </article>
         </div>
@@ -195,8 +195,8 @@ export default function Home() {
 
       <section className="workflow-section" id="workflow">
         <div className="section-heading">
-          <p className="eyebrow">Workflow</p>
-          <h2>Designed for advanced teams, not fragile demos.</h2>
+          <p className="eyebrow">How it works</p>
+          <h2>Easy to understand. Easy to plug in.</h2>
         </div>
 
         <div className="workflow-grid">
@@ -213,12 +213,11 @@ export default function Home() {
       <section className="security-section" id="security">
         <div className="security-panel">
           <div className="security-copy">
-            <p className="eyebrow">Safety and legitimacy</p>
-            <h2>Built to make agent operations feel credible.</h2>
+            <p className="eyebrow">Why this matters</p>
+            <h2>The basic identity stack for an agent.</h2>
             <p>
-              The point is not just capability. The point is giving every agent a
-              coherent identity surface that can communicate, receive work, and
-              hold value without ad hoc credential sprawl.
+              If humans use Gmail, iMessage, and Coinbase, agents need something
+              similar. AgentID puts those building blocks behind one simple API.
             </p>
           </div>
 
@@ -235,8 +234,8 @@ export default function Home() {
           <p className="eyebrow">Join waitlist</p>
           <h2>Get early access to AgentID.</h2>
           <p>
-            Leave your email and we’ll reach out when onboarding opens for teams
-            building serious agent products.
+            Leave your email and we’ll reach out when AgentID is ready for people
+            building and testing agents.
           </p>
         </div>
 
@@ -265,7 +264,7 @@ export default function Home() {
             <textarea
               name="message"
               rows={4}
-              placeholder="Autonomous support agent, treasury agent, workflow copilot..."
+              placeholder="Customer support agent, shopping agent, research assistant..."
             />
           </label>
 
