@@ -117,20 +117,70 @@ textarea {
   font-size: 0.97rem;
 }
 
+.nav-links a,
 .nav-cta,
-.primary-button {
+.primary-button,
+.secondary-button {
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease,
+    border-color 0.22s ease,
+    background-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.nav-cta,
+.primary-button,
+.secondary-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 52px;
   padding: 0 24px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 999px;
-  background: var(--accent);
-  color: #101412;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+.nav-cta,
+.primary-button {
+  border: none;
+  background: var(--accent);
+  color: #101412;
   box-shadow: 0 14px 30px var(--accent-shadow);
+}
+
+.secondary-button {
+  gap: 10px;
+  border-color: rgba(16, 23, 21, 0.12);
+  background: rgba(255, 255, 255, 0.56);
+  color: var(--text);
+  box-shadow: var(--shadow-soft);
+}
+
+.secondary-button span {
+  font-size: 0.9rem;
+}
+
+.nav-cta:hover,
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-2px);
+}
+
+.secondary-button:hover {
+  border-color: rgba(16, 23, 21, 0.2);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.secondary-button:hover span {
+  transform: translate(2px, -2px);
 }
 
 .hero {
@@ -190,13 +240,20 @@ textarea {
 
 .hero-actions {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
   margin-top: 34px;
 }
 
+.hero-action-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .micro-copy {
-  max-width: 360px;
+  max-width: 440px;
   margin: 0;
   font-size: 0.95rem;
 }
@@ -646,8 +703,17 @@ textarea {
   }
 
   .hero-actions {
+    width: 100%;
+  }
+
+  .hero-action-group {
+    width: 100%;
     flex-direction: column;
-    align-items: flex-start;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
   }
 
   .hero-visual {

@@ -48,6 +48,7 @@ const assuranceItems = [
 ];
 
 export default function Home() {
+  const docsUrl = "https://docs.agent-id.dev";
   const formAction =
     process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ??
     "https://formspree.io/f/your-form-id";
@@ -67,6 +68,9 @@ export default function Home() {
           <a href="#bundle">Bundle</a>
           <a href="#workflow">Workflow</a>
           <a href="#security">Security</a>
+          <a href={docsUrl} target="_blank" rel="noreferrer">
+            API Docs
+          </a>
           <a href="#waitlist">Waitlist</a>
         </nav>
 
@@ -94,9 +98,20 @@ export default function Home() {
           </p>
 
           <div className="hero-actions">
-            <a className="primary-button" href="#waitlist">
-              Join waitlist
-            </a>
+            <div className="hero-action-group">
+              <a className="primary-button" href="#waitlist">
+                Join waitlist
+              </a>
+              <a
+                className="secondary-button"
+                href={docsUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Read API docs
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
             <p className="micro-copy">
               Built for anyone experimenting with agents, from side projects to
               production apps.
