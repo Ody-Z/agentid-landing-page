@@ -49,9 +49,12 @@ const assuranceItems = [
 
 export default function Home() {
   const docsUrl = "https://docs.agent-id.dev";
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://app.agent-id.dev";
+  const discordUrl =
+    process.env.NEXT_PUBLIC_DISCORD_URL ?? "https://discord.gg/NyQt8dnSZN";
   const formAction =
     process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ??
-    "https://formspree.io/f/your-form-id";
+    "https://formspree.io/f/xzdjrndy";
   const usingPlaceholder = formAction.includes("your-form-id");
 
   return (
@@ -69,14 +72,43 @@ export default function Home() {
           <a href="#workflow">Workflow</a>
           <a href="#security">Security</a>
           <a href={docsUrl} target="_blank" rel="noreferrer">
-            API Docs
+            Docs
           </a>
           <a href="#waitlist">Waitlist</a>
         </nav>
 
-        <a className="nav-cta" href="#waitlist">
-          Join waitlist
-        </a>
+        <div className="topbar-actions">
+          <a
+            className="icon-button"
+            href={discordUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Join Discord"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              role="presentation"
+              focusable="false"
+              aria-hidden="true"
+            >
+              <path
+                fill="currentColor"
+                d="M20.32 4.37a16.4 16.4 0 0 0-4.1-1.29.06.06 0 0 0-.07.03c-.18.32-.38.74-.52 1.07a15.12 15.12 0 0 0-4.54 0 10.7 10.7 0 0 0-.53-1.07.06.06 0 0 0-.07-.03 16.35 16.35 0 0 0-4.1 1.29.05.05 0 0 0-.02.02C3.78 8.25 3.05 12 3.41 15.7a.07.07 0 0 0 .03.05 16.53 16.53 0 0 0 5.03 2.55.06.06 0 0 0 .08-.02c.39-.53.73-1.1 1.02-1.7a.06.06 0 0 0-.03-.08 10.8 10.8 0 0 1-1.55-.74.06.06 0 0 1-.01-.1l.31-.23a.06.06 0 0 1 .06-.01c3.27 1.49 6.82 1.49 10.05 0a.06.06 0 0 1 .07.01l.31.23a.06.06 0 0 1-.01.1c-.49.29-1.01.54-1.55.74a.06.06 0 0 0-.03.08c.3.6.64 1.17 1.02 1.7a.06.06 0 0 0 .08.02 16.48 16.48 0 0 0 5.03-2.55.07.07 0 0 0 .03-.05c.43-4.28-.72-8-2.95-11.31a.05.05 0 0 0-.02-.02ZM9.85 13.42c-.98 0-1.79-.9-1.79-2s.79-2 1.79-2c1.01 0 1.8.9 1.79 2 0 1.1-.79 2-1.79 2Zm4.3 0c-.98 0-1.79-.9-1.79-2s.79-2 1.79-2c1.01 0 1.8.9 1.79 2 0 1.1-.78 2-1.79 2Z"
+              />
+            </svg>
+          </a>
+          <a
+            className="nav-secondary"
+            href={appUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Log in
+          </a>
+          <a className="nav-cta" href="#waitlist">
+            Join waitlist
+          </a>
+        </div>
       </header>
 
       <section className="hero" id="top">
@@ -109,12 +141,15 @@ export default function Home() {
                 rel="noreferrer"
               >
                 Read API docs
-                <span aria-hidden="true">↗</span>
+                <span className="button-arrow" aria-hidden="true">
+                  ↗
+                </span>
               </a>
             </div>
             <p className="micro-copy">
-              Built for anyone experimenting with agents, from side projects to
-              production apps.
+              Invite-only access is live now. Have a code? Use the top-right
+              Log in. Need one? Join Discord or the waitlist until public beta
+              opens next week.
             </p>
           </div>
 
